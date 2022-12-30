@@ -125,6 +125,9 @@ def propQ(
     return None
 
 def find_gs_vec(eigvals, eigvecs):
+    '''
+    Finds the groundstate vector.
+    '''
     cgs_energy = min(eigvals)
     for i, _ in enumerate(eigvals):
         if eigvals[i] == cgs_energy:
