@@ -16,4 +16,4 @@ BH_run_MPI.py :: Uses MPI (mpi4py) to parallelize the computation.
 
 These scripts output .h5 files that contain the _wavefunctions_ at the desired times. Any observables must be computed from the wavefunctions in post-processing. In the case of the first dipole moment, the equation is:
 
-$<\mu_1> = (8(<\mu_{1-}> - <\mu_{1+}>) - (<\mu_{2-}> - <\mu_{2+}>))/(12 E_0)$
+$<\mu_1> = \frac{(8(<\mu_{1-}> - <\mu_{1+}>) - (<\mu_{2-}> - <\mu_{2+}>))}{(12 E_0)}$
