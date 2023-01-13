@@ -124,6 +124,26 @@ def propQ(
 
     return None
 
+def qDRIFT_CNOT_counter(V):
+    '''
+    Input the list of qDRIFT evolution operators; output the number of CNOTS.
+    
+    V must be a list of operators in exponentiated form via .exp_i(), as in output from the qDRIFT function.
+    '''
+    CNOT = 0
+    for val in V:
+        n = 0
+        for st in val.primitive.primitive.to_list()[0][0]:
+            if st == 'I':
+                n += 0
+            else:
+                n += 1
+        if n == 0:
+            CNOT += 0
+        else:
+            CNOT += 2*(n - 1)
+    return CNOT
+
 def find_gs_vec(eigvals, eigvecs):
     '''
     Finds the groundstate vector.
